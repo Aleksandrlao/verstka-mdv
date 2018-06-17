@@ -24,14 +24,28 @@ jQuery(document).ready(function($) {
 	$('.c_sertif-list').slick({
 		slidesToShow: 10, slidesToScroll: 1, arrows: true, infinite: false, autoplay: true, autoplaySpeed: 8000,
     responsive: [
-      { breakpoint: 1100, settings: { slidesToShow: 9 } }
+      { breakpoint: 1300, settings: { slidesToShow: 9 } },
+      { breakpoint: 1150, settings: { slidesToShow: 8 } },
+      { breakpoint: 1000, settings: { slidesToShow: 7 } },
+      { breakpoint: 850, settings: { slidesToShow: 6 } },
+      { breakpoint: 700, settings: { slidesToShow: 5 } },
+      { breakpoint: 550, settings: { slidesToShow: 4 } },
+      { breakpoint: 400, settings: { slidesToShow: 3 } }
     ]
 	});
 
 // Action
-	$('.c_info-slider').slick({
-		slidesToShow: 1, slidesToScroll: 1, arrows: true, autoplay: true, autoplaySpeed: 8000
-	});
+	$('.c_client-video').slick({
+    slidesToShow: 1, slidesToScroll: 1, arrows: false, fade: true, infinite: false, asNavFor: '.c_client-list'
+  });
+  $('.c_client-list').slick({
+    slidesToShow: 4, slidesToScroll: 1, arrows: true, infinite: false, asNavFor: '.c_client-video', focusOnSelect: true,
+    responsive: [
+      { breakpoint: 1150, settings: { slidesToShow: 3 } },
+      { breakpoint: 800, settings: { slidesToShow: 2 } },
+      { breakpoint: 500, settings: { slidesToShow: 1 } }
+    ]
+  });
 
 
 
